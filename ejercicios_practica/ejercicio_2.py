@@ -1,7 +1,7 @@
 # Funciones [Python]
 # Ejercicios de práctica
 
-# Autor: Inove Coding School
+# Autor: Edwin Yepez
 # Version: 2.2
 
 # IMPORTANTE: NO borrar los comentarios
@@ -26,14 +26,20 @@ def promedio(numeros):
     # La función debe retornar (return) el promedio calculado
     # La función debe contemplar si se le pasa una lista vacia
     # (es decir, de "0" elementos)
-
+    #for numero in numeros:
+    if len(numeros) == 0:
+        print('No existen numeros en la lista!!!')
+    else:
+        sumatoria_numeros = sum(numeros)
+        cantidad_numeros = len(numeros)
+        resultado = sumatoria_numeros / cantidad_numeros
     return resultado
-
-
+    
+    
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     
-    numeros = [2, 4, 6, 8, 10, 12]
+    numeros = [2, 4, 6, 8, 12, 16, 20]
 
     # Alumno: Complete la función "promedio"
 
@@ -41,6 +47,5 @@ if __name__ == '__main__':
     resultado_promedio = promedio(numeros)
 
     # Luego imprimir en pantalla el valor resultante:
-    # print(....)
-
+    print(resultado_promedio)
     print("terminamos")

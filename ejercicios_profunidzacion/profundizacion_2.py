@@ -1,7 +1,7 @@
 # Funciones [Python]
 # Ejercicios de profundización
 
-# Autor: Inove Coding School
+# Autor: Edwin Yepez
 # Version: 2.2
 
 # NOTA: 
@@ -36,13 +36,20 @@ en la lista pueden usar el método nativo de list "count"
 # --------------------------------
 # Aquí copiar la función "lista_aleatoria"
 # ya elaborada en el ejercicio anterior
-
+def lista_aleatoria(inicio, fin, cantidad):
+    lista = []
+    for numero in range(cantidad):
+        numero = random.randint(inicio, fin)
+        lista.append(numero)
+    return lista
 
 # --------------------------------
 
 # --------------------------------
 # Aquí dentro definir la función contar
-
+def contar(lista, numero):
+    numero_repetido = lista.count(numero)
+    return numero_repetido
 
 # --------------------------------
 
@@ -53,17 +60,17 @@ if __name__ == '__main__':
     # para que genere una lista de 5 números que esten comprendidos
     # entre los números 1 al 6 inclusive
 
-    # lista_numeros = lista_aleatoria(...)
+    lista_numeros = lista_aleatoria(1, 6, 5)
 
     # Imprimir en pantalla "lista_numeros" que tendrá
     # los valores retornado por la función "lista_aleatoria":
 
-    # print(lista_numeros)
+    print(lista_numeros)
 
     # Luego quiero averiguar cuantas veces se repite el numero 3
     # en la lista aleatoria creada
-    # cantidad_tres = contar(lista_numeros, 3)
+    cantidad_tres = contar(lista_numeros, 3)
 
-    # print(cantidad_tres)
+    print(cantidad_tres)
 
     print("terminamos")

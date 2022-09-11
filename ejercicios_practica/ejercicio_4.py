@@ -1,7 +1,7 @@
 # Funciones [Python]
 # Ejercicios de práctica
 
-# Autor: Inove Coding School
+# Autor: Edwin Yepez
 # Version: 2.2
 
 # IMPORTANTE: NO borrar los comentarios
@@ -12,9 +12,13 @@
 # --------------------------------
 # Aquí dentro definir la función que solicitará
 # el nombre de tres invitados
-# def generar_invitados():
-
-
+def generar_invitados(cantidad_invitados):
+    lista_invitados = []
+    for invitado in range(cantidad_invitados):
+        nombre = input("Ingrese el nombre del invitado: ")
+        lista_invitados.append(nombre)
+    #print(lista_invitados)
+    return lista_invitados
 # --------------------------------
 
 
@@ -39,9 +43,11 @@ if __name__ == '__main__':
     # y solicitar los 3 invitiados, uno en cada iteración del bucle
 
     # Luego de crear la función invocarla en este lugar:
+    #generar_invitados(3)
+    
+    lista_invitados = generar_invitados(6)
 
-    # lista_invitados = generar_invitados()
 
     # Imprimir en pantalla "lista_invitados":
-
+    print('La lista de invitados ingresada es: ',lista_invitados)
     print("terminamos")

@@ -1,7 +1,7 @@
 # Funciones [Python]
 # Ejercicios de profundización
 
-# Autor: Inove Coding School
+# Autor: Edwin Yepez
 # Version: 2.2
 
 # NOTA: 
@@ -49,6 +49,12 @@ Finalmente dicha función debe retornar la lista de elementos random generados.
 
 # --------------------------------
 # Aquí dentro definir la función lista_aleatoria
+def lista_aleatoria(inicio, fin, cantidad):
+    lista = []
+    for numero in range(cantidad):
+        numero = random.randint(inicio, fin)
+        lista.append(numero)
+    return lista
 
 
 # --------------------------------
@@ -57,16 +63,16 @@ if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     
     inicio = 0
-    fin = 10
-    cantidad = 5
+    fin = 80
+    cantidad = 6
 
     # Alumno: Luego de crear la función invocarla en este lugar:
 
-    # mi_lista_aleatoria = lista_aleatoria(inicio, fin, cantidad)
+    mi_lista_aleatoria = lista_aleatoria(inicio, fin, cantidad)
 
     # Imprimir en pantalla "mi_lista_aleatoria" que tendrá
     # los valores retornado por la función lista_aleatoria:
-
+    print('La lista aleatoria creada es: ',mi_lista_aleatoria)
     # print(mi_lista_aleatoria)
 
     print("terminamos")
